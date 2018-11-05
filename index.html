@@ -361,7 +361,7 @@
 			<div id="textareacontainer">
 				<div id="textarea">
 					<div id="textareawrapper">
-						<textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
+<textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
 <!DOCTYPE html>
 <html>
 <head>
@@ -371,7 +371,7 @@
 The content of the body element is displayed in your browser.
 </body>
 </html>
-						</textarea>
+</textarea>
 						<form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
 							<input type="hidden" name="code" id="code" />
 						</form>
@@ -583,6 +583,7 @@ The content of the body element is displayed in your browser.
 			  window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
 			    mode: "text/html",
 			    htmlMode: true,
+				lineNumbers: true,
 			    lineWrapping: true,
 			    smartIndent: false,
 			    addModeClass: true
