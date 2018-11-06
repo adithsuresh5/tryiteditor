@@ -7,6 +7,18 @@
 		<link rel="stylesheet" href="w3css/4/w3.css">
 		<link rel="stylesheet" href="lib/codemirror.css">
 		<script src="lib/codemirror.js"></script>
+		
+		<link rel="stylesheet" href="https://codemirror.net/addon/hint/show-hint.css">
+		<script src="https://codemirror.net/addon/hint/show-hint.js"></script>
+
+		<script src="https://codemirror.net/addon/hint/xml-hint.js"></script>
+		<script src="https://codemirror.net/addon/hint/html-hint.js"></script>
+		<script src="https://codemirror.net/addon/hint/javascript-hint.js"></script>
+
+		<script src="https://codemirror.net/mode/xml/xml.js"></script>
+		<script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+		<script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+		<script src="https://codemirror.net/mode/css/css.js"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -588,6 +600,18 @@ The content of the body element is displayed in your browser.
 			    smartIndent: false,
 			    addModeClass: true
 			  });
+			  
+			  window.editor.on("keyup", function (cm, event) {
+				if 	(
+						(!cm.state.completionActive) &&
+						(event.keyCode > 32 && event.keyCode < 37) || 
+						(event.keyCode > 40 && event.keyCode < 127) ||
+						(event.keyCode > 187 && event.keyCode < 191) 
+					)
+					{
+						CodeMirror.commands.autocomplete(cm, null, {completeSingle: false});
+					}
+				});
 			//  window.editor.on("change", function () {window.editor.save();});
 			}
 			colorcoding();
