@@ -7,6 +7,13 @@
 		<link rel="stylesheet" href="css/w3.css">
 		<link rel="stylesheet" href="css/codemirror.css">
 		<script src="lib/codemirror.js"></script>
+		<script language="JavaScript" type="text/javascript">
+		//<![CDATA[
+			window.onbeforeunload = function(){
+				return 'Are you sure you want to leave?';
+			};
+		//]]>
+		</script>		
 		<script>
 			if (window.addEventListener) {              
 			    window.addEventListener("resize", browserResize);
