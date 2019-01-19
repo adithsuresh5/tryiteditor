@@ -300,8 +300,8 @@
 			<div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
 				<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent w3-hover-dark-grey" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
 				<div class="w3-bar-block">
-					<a href="javascript:void(0);" onclick="saveTextAsFile()" title="Save code to local storage" class="w3-button w3-bar-item"><i class="fa fa-save" style="font-size:26px;margin-left:-4px;margin-right:8px;width:30px;"></i><span style="position:relative;top:-4px;left:2px;">Download Code</span></a>
-					<a href="javascript:void(0);" onclick="document.getElementById('fileToLoad').click();" title="Load file from local storage" class="w3-button w3-bar-item"><i class="fa" style="font-size:26px;font-weight:bolder;margin-left:-4px;margin-right:8px;width:30px;">&#x21EB;</i><span style="position:relative;top:-4px;left:2px;">Load file</span></a>
+					<a href="javascript:void(0);" onclick="openMenu();saveTextAsFile()" title="Save code to local storage" class="w3-button w3-bar-item"><i class="fa fa-save" style="font-size:26px;margin-left:-4px;margin-right:8px;width:30px;"></i><span style="position:relative;top:-4px;left:2px;">Download Code</span></a>
+					<a href="javascript:void(0);" onclick="openMenu();document.getElementById('fileToLoad').click();" title="Load file from local storage" class="w3-button w3-bar-item"><i class="fa" style="font-size:26px;font-weight:bolder;margin-left:-4px;margin-right:8px;width:30px;">&#x21EB;</i><span style="position:relative;top:-4px;left:2px;">Load file</span></a>
 					<input type="file" id="fileToLoad" accept="text/html" onchange="loadFileAsText(this);" style="display:none!important;">
 				</div>
 			</div>
