@@ -137,7 +137,8 @@ body {
 <br/>
 <p>Enter your Name : <input type="text" ng-model="name"></p>
 <script>
-	document.getElementById('date').innerHTML = new Date().toLocaleDateString();
+	var dt = new Date();var dd=dt.getDate().toString();var mm=(dt.getMonth()+1).toString();var yyyy=dt.getFullYear().toString();
+	document.getElementById("date").innerHTML = dd + "/" + mm + "/" + yyyy;
 </script>
 </body>
 </html>
